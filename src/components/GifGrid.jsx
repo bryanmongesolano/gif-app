@@ -3,7 +3,6 @@ import { GifCard } from "./";
 
 export const GifGrid = ({ search }) => {
     const { gifs, isLoading } = useFetchGifs(search);
-
     return (
         <div>
             <h3>{search}</h3>

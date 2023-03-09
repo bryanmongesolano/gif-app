@@ -5,7 +5,6 @@ export const useFetchGifs = ( search ) =>
 {
     const [ gifs, setGifs ] = useState( [] );
     const [ isLoading, setIsLoading ] = useState( true );
-
     const getImages = async () =>
     {
         const newGifs = await getGifs( search );
@@ -13,7 +12,7 @@ export const useFetchGifs = ( search ) =>
         setIsLoading( false );
     };
 
-    useEffect( () => getImages, [] );
+    useEffect( () => {getImages()}, [] );
 
     return {
         gifs,
